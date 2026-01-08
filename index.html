@@ -18,7 +18,7 @@
 
     a {
       text-decoration: none;
-      color: #ff9800; /* Accent color for links */
+      color: #ff9800;
       transition: color 0.3s;
     }
     a:hover {
@@ -54,20 +54,40 @@
 
     /* Header */
     header {
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       background-color: #1e1e1e;
       color: #fff;
-      padding: 60px 20px;
+      padding: 40px 20px;
       border-radius: 12px;
       margin-bottom: 40px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      text-align: left;
     }
-    header h1 {
+
+    /* Profile Picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff9800;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-right: 30px;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
       margin: 0;
-      font-size: 2.8em;
+      font-size: 2.5em;
       color: #ff9800;
     }
-    header p {
+    .header-text p {
       margin: 5px 0;
       font-size: 1.1em;
       color: #ccc;
@@ -146,6 +166,17 @@
     }
 
     /* Responsive */
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -153,7 +184,7 @@
       nav a {
         margin: 8px 0;
       }
-      header h1 {
+      .header-text h1 {
         font-size: 2em;
       }
     }
@@ -176,13 +207,16 @@
 
     <!-- Header -->
     <header>
-      <h1>Clarence Josh S. Ricafrente</h1>
-      <p><strong>Junior Software Developer</strong></p>
-      <p>
-        📍 Lucena City, Philippines •  
-        📧 <a href="mailto:ricafrentejosh19@gmail.com">ricafrentejosh19@gmail.com</a> •  
-        GitHub: <a href="https://github.com/ricafrentejosh19-dot" target="_blank">github.com/ricafrentejosh19-dot</a>
-      </p>
+      <img src="profile.jpg" alt="Clarence Josh S. Ricafrente" class="profile-pic">
+      <div class="header-text">
+        <h1>Clarence Josh S. Ricafrente</h1>
+        <p><strong>Junior Software Developer</strong></p>
+        <p>
+          📍 Lucena City, Philippines •  
+          📧 <a href="mailto:ricafrentejosh19@gmail.com">ricafrentejosh19@gmail.com</a> •  
+          GitHub: <a href="https://github.com/ricafrentejosh19-dot" target="_blank">github.com/ricafrentejosh19-dot</a>
+        </p>
+      </div>
     </header>
 
     <!-- About -->
