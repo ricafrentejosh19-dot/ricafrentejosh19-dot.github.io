@@ -129,6 +129,7 @@
       perspective: 1000px;
       cursor: pointer;
       position: relative;
+      display: block;
     }
 
     .hero-image-flipper {
@@ -151,12 +152,14 @@
       border: 5px solid white;
       box-shadow: 0 10px 50px rgba(0,0,0,0.3);
       position: absolute;
+      top: 0;
+      left: 0;
       backface-visibility: hidden;
-      animation: fadeInDown 1s ease;
     }
 
     .hero-image-front {
       transform: rotateY(0deg);
+      animation: fadeInDown 1s ease;
     }
 
     .hero-image-back {
@@ -693,7 +696,7 @@
       <div class="hero-image-container" id="profileImageContainer">
         <div class="hero-image-flipper">
           <img src="https://raw.githubusercontent.com/ricafrentejosh19-dot/ricafrentejosh19-dot.github.io/main/profile.jpg" alt="Clarence Josh S. Ricafrente - Front" class="hero-image hero-image-front" onerror="this.style.display='none'">
-          <img src="https://raw.githubusercontent.com/ricafrentejosh19-dot/ricafrentejosh19-dot.github.io/main/profile.jpg" alt="Clarence Josh S. Ricafrente - Back" class="hero-image hero-image-back" onerror="this.style.display='none'">
+          <img src="https://raw.githubusercontent.com/ricafrentejosh19-dot/ricafrentejosh19-dot.github.io/main/1768578503066_image.png" alt="Clarence Josh S. Ricafrente - Back" class="hero-image hero-image-back" onerror="this.src='https://raw.githubusercontent.com/ricafrentejosh19-dot/ricafrentejosh19-dot.github.io/main/profile.jpg'">
         </div>
       </div>
       <h1>Clarence Josh S. Ricafrente</h1>
