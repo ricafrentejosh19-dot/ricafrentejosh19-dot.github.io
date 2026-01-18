@@ -617,6 +617,10 @@
         padding: 15px 20px;
       }
 
+      nav.scrolled {
+        padding: 15px 20px;
+      }
+
       .hamburger {
         display: flex;
       }
@@ -968,7 +972,7 @@
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
+      if (window.innerWidth > 768 && window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
